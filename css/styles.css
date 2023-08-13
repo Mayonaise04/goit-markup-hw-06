@@ -586,9 +586,9 @@ footer{
 }
 
 .footer-form-wrapper{
-    margin-left: 80px;
-    gap: 24px;
+    margin-left: 80px; 
     display: flex;
+    flex-direction: column;
 }
 
 .footer-form{
@@ -619,6 +619,8 @@ label{
     background: #2E2F42;
     width: 264px;
     height: 40px;
+    color: var(--primary-white-color);
+    padding: 8px 16px;
     border-radius: 4px;
     border: 1px solid var(--white, #FFF);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15); 
@@ -627,7 +629,6 @@ label{
 input::placeholder{
     font-family: Roboto, sans-serif;
     color: white;
-    text-indent: 16px;
     align-items: center;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -669,8 +670,7 @@ input::placeholder{
     gap: 16px;
     cursor: pointer;
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1)
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);; 
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .subscribe-button:hover, .subscribe-button:focus {
@@ -698,6 +698,7 @@ input::placeholder{
     position: absolute;
     top: 50%;
     left: 50%;
+    padding: 72px 24px 24px;
     min-width: 408px;
     min-height: 584px;
     border-radius: 4px;
@@ -712,9 +713,8 @@ input::placeholder{
 
 .modal-close{
     position: absolute;
-    top: 8px;
-    right: 8px;
-    padding: 3px;
+    top: 24px;
+    right: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -744,10 +744,6 @@ input::placeholder{
     pointer-events: none;
 }
 
-.pop-up{
-    padding: 72px 24px 24px;
-}
-
 .form-header{
     display: block;
     font-family: Roboto, sans-serif;
@@ -758,16 +754,17 @@ input::placeholder{
     letter-spacing: 0.32px;
     color: var(--navyblue, #2E2F42);
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 34px;
 }
 
 .label-space{
     position: relative;
+    margin-bottom: 26px;
 }
 
 .person-icon, .phone-icon, .email-icon{
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 16px;
     transform: translateY(-50%);
     fill: #2E2F42; 
@@ -776,24 +773,21 @@ input::placeholder{
 
 .label-line{
     color: #8e8f99;
-    font-family: Roboto, sans-serif;
     font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 14px;
     letter-spacing: 0.48px; 
-    position: relative; 
+    position: absolute;
+    top: -18px; 
 }
 
 .input-field{
     width: 100%;
     max-width: 360px;
     height: 40px;
+    padding: 0 38px;
     border-radius: 4px;
     border: 1px solid  #8e8f99;
     background: var(--dairy, #FCFCFC);
-    margin-top: 4px;
-    margin-bottom: 8px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
@@ -816,13 +810,11 @@ textarea, input{
 }
 
 .comment-field{
-    width: 100%;
-    max-width: 360px;
     height: 120px;
+    padding: 8px 16px;
     border-radius: 4px;
     border: 1px solid #8e8f99;
     background: #FCFCFC;
-    margin-top: 4px;
     resize: none; 
 }
 
@@ -834,8 +826,6 @@ textarea::placeholder{
     font-weight: 400;
     line-height: 14px; 
     letter-spacing: 0.48px; 
-    text-indent: 14px;
-    padding-top: 8px;
 }
 
 .accept{
@@ -847,6 +837,7 @@ textarea::placeholder{
 
 .accept-space{
     position: relative;
+    cursor: pointer;
 }
 
 .on-click-icon{
